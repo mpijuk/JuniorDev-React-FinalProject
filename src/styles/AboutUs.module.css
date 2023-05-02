@@ -1,0 +1,22 @@
+.divContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 3rem;
+}
+
+.divLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 40rem;
+    background-color: azure;
+    margin-right: 3rem;
+}
+
+.divData {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100rem;
+}

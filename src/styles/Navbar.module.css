@@ -1,0 +1,29 @@
+.secondRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #FFEA78;
+}
+
+
+.navDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.navDiv:hover{
+    cursor:pointer;
+    opacity: 0.7;
+}
+
+.navLink {
+    margin: 20px 0px;
+    text-decoration: none;
+    color: azure;
+    list-style-type: none;
+    font-size: 22px;
+}
