@@ -21,7 +21,7 @@ const App = () => {
             <Route path="/list" element={<List />} />
             <Route path="/donations" element={<Donations />} />
             <Route path="/news" element={<News />} />
-            <Route path="/addNew" element={<AddNew />} />
+            <Route path="/addNew" element={<AddNew isAdmin={isAdmin}/>} />
         </Routes>
       </BrowserRouter>
     </LocalizationProvider>

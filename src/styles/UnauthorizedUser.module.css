@@ -1,0 +1,23 @@
+.unauthorizedContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    width: 20rem;
+    margin: 4rem auto;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    
+}
+
+.pDescription {
+    font-size: 28px;
+    color: #333;
+}
+
+.spanName {
+    color: #66bb6a;
+    font-weight: bold;
+    font-size: 32px;
+}

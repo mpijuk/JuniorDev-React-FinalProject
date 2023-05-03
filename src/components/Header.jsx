@@ -15,7 +15,8 @@ const Header = ({isAdmin, setAdmin}) => {
                                 type="checkbox" 
                                 id="checkbox" 
                                 checked={isAdmin}
-                                onChange={() => setAdmin((prev) => { return !prev})}
+                                onChange={() => setAdmin((prev) => { return !prev;})}
+                                
                             />
                             <div className={`${styles.slider} ${styles.round}`}></div>
                         </label>

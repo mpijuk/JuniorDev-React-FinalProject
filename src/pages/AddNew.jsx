@@ -1,8 +1,11 @@
 import AddNewForm from "../components/addNewComponents/addNewForm";
+import UnauthorizedUser from "../components/addNewComponents/UnauthorizedUser";
 
-const AddNew = () => {
+const AddNew = ({isAdmin}) => {
     return(
-        <AddNewForm />
+        <>
+            { isAdmin ? <AddNewForm /> : <UnauthorizedUser /> }
+        </>
     );
 };
 
