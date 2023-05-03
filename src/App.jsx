@@ -6,21 +6,26 @@ import Donations from "./pages/Donations";
 import AddNew from "./pages/AddNew";
 import Header from "./components/Header";
 import { useState } from "react";
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 
 const App = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   return (
-    <BrowserRouter>
-      <Header isAdmin={isAdmin} setAdmin={setIsAdmin} />
-      <Routes>
-          <Route exact path="/" element={<AboutUs />} />
-          <Route path="/list" element={<List />} />
-          <Route path="/donations" element={<Donations />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/addNew" element={<AddNew />} />
-      </Routes>
-    </BrowserRouter>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <BrowserRouter>
+        <Header isAdmin={isAdmin} setAdmin={setIsAdmin} />
+        <Routes>
+            <Route exact path="/" element={<AboutUs />} />
+            <Route path="/list" element={<List />} />
+            <Route path="/donations" element={<Donations />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/addNew" element={<AddNew />} />
+        </Routes>
+      </BrowserRouter>
+    </LocalizationProvider>
+
   );
 }
 

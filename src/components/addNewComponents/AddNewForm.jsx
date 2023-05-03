@@ -9,7 +9,10 @@ import {
     FormControl,
     Typography,
     useMediaQuery,
+    Divider,
 } from "@mui/material";
+import { DatePicker } from '@mui/x-date-pickers';
+import dayjs from "dayjs";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { requestFormat } from "../../utils";
@@ -20,7 +23,6 @@ const orderSchema = yup.object().shape({
     name: yup.string().min(2, 'name too short').required("Name is required"),
     age: yup.string().required("Age is required"),
     picturePath: yup.string().required("Picture path is required"),
-    lastExamination: yup.string().required("Last examination date is required")
 });
 
 const initialValuesOrder = {
@@ -29,7 +31,7 @@ const initialValuesOrder = {
     age: "",
     description: "",
     picturePath: "",
-    lastExamination: "",
+    lastExamination: "1/1/2022",
     chipped: false,
     adopted: false,
 };
@@ -50,7 +52,7 @@ const AddNewForm = () => {
           p="2rem"
           m="4rem auto"
           borderRadius="1.5rem"
-          backgroundColor="#DBECEB"
+          backgroundColor= "azure"
         >
             <Formik
               onSubmit={handleFormSubmit}
@@ -64,6 +66,7 @@ const AddNewForm = () => {
                   handleBlur,
                   handleChange,
                   handleSubmit,
+                  setFieldValue,
                 }) => (
                     <form onSubmit={handleSubmit}>
                         <Box
@@ -71,9 +74,12 @@ const AddNewForm = () => {
                           gap = "25px"
                           gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                         >
-                            <Typography color="#0b5394" fontWeight="800" fontSize="30px" gridColumn="span 4">Add new animal</Typography>
+                            <Typography color="#333" fontWeight="800" fontSize="30px" gridColumn="span 4">Add new animal</Typography>
+                            <Divider sx={{ 
+                                gridColumn: "span 4",
+                              }}/>
                             
-                            <Typography color="#0b5394" fontWeight="600" fontSize="18px" gridColumn="span 4">Animal personal data</Typography>
+                            <Typography color="#333" fontWeight="600" fontSize="18px" gridColumn="span 4">Animal personal data</Typography>
                             <RadioGroup
                               onChange={handleChange}
                               value={values.species}
@@ -82,10 +88,10 @@ const AddNewForm = () => {
                                 gridColumn: "span 4",
                               }}
                             >
-                                <FormControlLabel value="Dog" label="Dog" control={<Radio />}></FormControlLabel>
-                                <FormControlLabel value="Cat" label="Cat" control={<Radio />}></FormControlLabel>
-                                <FormControlLabel value="Bird" label="Bird" control={<Radio />}></FormControlLabel>
-                                <FormControlLabel value="Other" label="Other" control={<Radio />}></FormControlLabel>
+                                <FormControlLabel value="Dog" label="Dog" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                                <FormControlLabel value="Cat" label="Cat" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                                <FormControlLabel value="Bird" label="Bird" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                                <FormControlLabel value="Other" label="Other" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
                             </RadioGroup>
                             <TextField
                               label="Name"
@@ -129,16 +135,12 @@ const AddNewForm = () => {
                               sx={{ gridColumn: "span 4" }}
                             />
                             
-                            <Typography color="#0b5394" fontWeight="600" fontSize="18px" gridColumn="span 4">Additional data</Typography>
-                            <TextField
+                            <Typography color="#333" fontWeight="600" fontSize="18px" gridColumn="span 4">Additional data</Typography>
+                            <DatePicker
+                              onChange={(value) => setFieldValue("lastExamination", dayjs(value).format("MM/DD/YYYY"))}
                               label="Last examination"
-                              onBlur={handleBlur}
-                              onChange={handleChange}
-                              value={values.lastExamination}
                               name="lastExamination"
-                              error={Boolean(touched.lastExamination) && Boolean(errors.lastExamination)}                                
-                              helperText={touched.lastExamination && errors.lastExamination}
-                              sx={{ gridColumn: "span 4" }}
+                              sx={{ gridColumn: "span 2" }}
                             />
                             <FormControl 
                               sx={{ 
@@ -150,7 +152,7 @@ const AddNewForm = () => {
                                   onChange={handleChange}
                                   value={values.chipped}
                                   name="chipped"
-                                  control={<Checkbox />} 
+                                  control={<Checkbox style={{ color: "#66bb6a" }}/>} 
                                 />
                             </FormControl>
                         </Box>
@@ -161,9 +163,9 @@ const AddNewForm = () => {
                               sx={{
                                 m: "2rem 0",
                                 p: "1rem",
-                                backgroundColor: "#0b5394",
-                                color: "white",
-                                "&:hover": { color: "#0b5394" },
+                                backgroundColor: "#66bb6a",
+                                color: "azure",
+                                "&:hover": { color: "#66bb6a" },
                               }}
                             >
                                 Save

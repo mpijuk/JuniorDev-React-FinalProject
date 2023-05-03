@@ -21,6 +21,61 @@
       "chipped": false,
       "adopted": false,
       "id": 2
+    },
+    {
+      "species": "Dog",
+      "name": "Blackey",
+      "age": 5,
+      "description": "Žućo je legenda od pasa.",
+      "picturePath": "žućo.png",
+      "lastExamination": "05/12/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 3
+    },
+    {
+      "species": "Other",
+      "name": "Blackey",
+      "age": 3,
+      "description": "",
+      "picturePath": "blackey.png",
+      "lastExamination": "05/27/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 4
+    },
+    {
+      "species": "Other",
+      "name": "Blackey",
+      "age": 3,
+      "description": "",
+      "picturePath": "blackey.png",
+      "lastExamination": "05/27/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 5
+    },
+    {
+      "species": "Other",
+      "name": "Blackey",
+      "age": 3,
+      "description": "",
+      "picturePath": "blackey.png",
+      "lastExamination": "05/27/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 6
+    },
+    {
+      "species": "Bird",
+      "name": "Ara",
+      "age": 1,
+      "description": "Ara is very rude sometimes.",
+      "picturePath": "ara.png",
+      "lastExamination": "05/10/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 7
     }
   ],
   "donations": [],
