@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import News from "./pages/News";
-import List from "./pages/List";
+import Animals from "./pages/Animals";
 import Donations from "./pages/Donations";
 import AddNew from "./pages/AddNew";
 import Header from "./components/Header";
@@ -18,7 +18,7 @@ const App = () => {
         <Header isAdmin={isAdmin} setAdmin={setIsAdmin} />
         <Routes>
             <Route exact path="/" element={<AboutUs />} />
-            <Route path="/list" element={<List />} />
+            <Route path="/animals" element={<Animals />} />
             <Route path="/donations" element={<Donations />} />
             <Route path="/news" element={<News />} />
             <Route path="/addNew" element={<AddNew isAdmin={isAdmin}/>} />

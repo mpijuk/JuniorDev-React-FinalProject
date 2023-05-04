@@ -1,6 +1,6 @@
 export const navigationItems = [
     { label: 'About us', path: '/' },
-    { label: 'List', path: '/list' },
+    { label: 'Animals', path: '/animals' },
     { label: 'Donations', path: '/donations' },
     { label: 'News', path: '/news' },
     { label: 'Add New', path: '/addNew' },
