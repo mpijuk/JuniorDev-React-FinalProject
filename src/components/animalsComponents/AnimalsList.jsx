@@ -2,7 +2,6 @@ import axios from "axios";
 
 const AnimalsList = ({animals, refreshList}) => {
     
-    console.log(animals);
     return(
         <div>
             {animals?.map((animal) => (

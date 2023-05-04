@@ -16,7 +16,7 @@ const Animals = () => {
 
     return(
         <div>
-            {/*<Filters refreshList={setAnimals} /> */}
+            <Filters refreshList={setAnimals} />
             <AnimalsList animals={animals} refreshList={setAnimals} />
         </div>
     );
