@@ -1,7 +1,7 @@
 .divContainer {
     display: flex;
     justify-content: space-around;
-    background-color: azure;
+    background-color: #E5C9D7;
     height: 10rem;
     align-items: center;
 }

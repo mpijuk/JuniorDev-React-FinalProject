@@ -1,5 +1,12 @@
 import axios from "axios";
 import { useRef } from "react";
+import styles from "../../styles/Filters.module.css";
+import {
+    Radio,
+    RadioGroup,
+    FormControlLabel,
+    Divider,
+} from "@mui/material";
 
 const Filters = ({ refreshList }) => {
 
@@ -52,21 +59,28 @@ const Filters = ({ refreshList }) => {
 
 
     return(
-        <div>
-            <div>
-                <p>Filter by adoption status: </p>
-                <label><input type="radio" id="allAdoption" value="allAdoption" name="adoption" onChange={handleAdoptionFilterChange} />All</label>
-                <label><input type="radio" id="adopted" value="true" name="adoption" onChange={handleAdoptionFilterChange} />Adopted</label>
-                <label><input type="radio" id="notAdopted" value="false" name="adoption" onChange={handleAdoptionFilterChange} />Not adopted</label>
-            </div>
-            <div>
-                <p>Filter by species: </p>
-                <label><input type="radio" id="allSpecies" value="allSpecies" name="species" onChange={handleSpeciesFilterChange} />All</label>
-                <label><input type="radio" id="dog" value="Dog" name="species" onChange={handleSpeciesFilterChange} />Dog</label>
-                <label><input type="radio" id="cat" value="Cat" name="species" onChange={handleSpeciesFilterChange} />Cat</label>
-                <label><input type="radio" id="bird" value="Bird" name="species" onChange={handleSpeciesFilterChange} />Bird</label>
-                <label><input type="radio" id="other" value="Other" name="species" onChange={handleSpeciesFilterChange} />Other</label>
-            </div>
+        <div className={styles.divContainer}>
+            <p>Adoption status:</p>
+            <RadioGroup
+              onChange={handleAdoptionFilterChange}
+              name = "adoption"
+            >
+                <FormControlLabel value="allAdoption" label="All" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                <FormControlLabel value="true" label="Adopted" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                <FormControlLabel value="false" label="Not adopted" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+            </RadioGroup>
+            <Divider style={{paddingTop:"0.75rem"}}/>
+            <p>Species:</p>
+            <RadioGroup
+              onChange={handleSpeciesFilterChange}
+              name = "species"
+            >
+                <FormControlLabel value="allSpecies" label="All" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                <FormControlLabel value="Dog" label="Dog" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                <FormControlLabel value="Cat" label="Cat" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                <FormControlLabel value="Bird" label="Bird" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+                <FormControlLabel value="Other" label="Other" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
+            </RadioGroup>
         </div>
     );
 };

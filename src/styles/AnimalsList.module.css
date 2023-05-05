@@ -1,0 +1,17 @@
+.divContainer {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(4, 250px);
+    grid-gap: 30px;
+    width: 75rem;
+    background-color: #E5C9D7;
+}
+.zoom {
+    border-radius: 20px;
+    object-fit: cover;
+}
+.zoom:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

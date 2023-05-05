@@ -52,7 +52,7 @@ const AddNewForm = () => {
           p="2rem"
           m="4rem auto"
           borderRadius="1.5rem"
-          backgroundColor= "azure"
+          backgroundColor= "#E5C9D7"
         >
             <Formik
               onSubmit={handleFormSubmit}
