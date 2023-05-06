@@ -1,6 +1,9 @@
 .headerContainer {
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .firstRow {
@@ -12,7 +15,7 @@
 }
 
 .name {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bolder;
     color: #66bb6a;
 }

@@ -18,7 +18,7 @@ const App = () => {
         <Header isAdmin={isAdmin} setAdmin={setIsAdmin} />
         <Routes>
             <Route exact path="/" element={<AboutUs />} />
-            <Route path="/animals" element={<Animals />} />
+            <Route path="/animals" element={<Animals isAdmin={isAdmin}/>} />
             <Route path="/donations" element={<Donations />} />
             <Route path="/news" element={<News />} />
             <Route path="/addNew" element={<AddNew isAdmin={isAdmin}/>} />

@@ -8,7 +8,7 @@
       "picturePath": "dog3.jpg",
       "lastExamination": "18/7/2022",
       "chipped": true,
-      "adopted": true,
+      "adopted": false,
       "id": 1
     },
     {
@@ -19,7 +19,7 @@
       "picturePath": "cat3.jpg",
       "lastExamination": "3/1/2023",
       "chipped": false,
-      "adopted": false,
+      "adopted": true,
       "id": 2
     },
     {
@@ -30,7 +30,7 @@
       "picturePath": "dog1.jpg",
       "lastExamination": "05/12/2023",
       "chipped": true,
-      "adopted": false,
+      "adopted": true,
       "id": 3
     },
     {
@@ -41,7 +41,7 @@
       "picturePath": "bird3.jpg",
       "lastExamination": "05/10/2023",
       "chipped": true,
-      "adopted": false,
+      "adopted": true,
       "id": 7
     },
     {
@@ -52,8 +52,30 @@
       "picturePath": "snake1.jpg",
       "lastExamination": "04/11/2023",
       "chipped": true,
-      "adopted": true,
+      "adopted": false,
       "id": 8
+    },
+    {
+      "species": "Bird",
+      "name": "Zoe",
+      "age": 4,
+      "description": "Zoe is a beautiful singer.",
+      "picturePath": "bird2.jpg",
+      "lastExamination": "02/17/2023",
+      "chipped": true,
+      "adopted": true,
+      "id": 9
+    },
+    {
+      "species": "Cat",
+      "name": "Oscar",
+      "age": 1,
+      "description": "Oscar is eager for love and attention",
+      "picturePath": "cat1.jpg",
+      "lastExamination": "04/09/2023",
+      "chipped": false,
+      "adopted": true,
+      "id": 10
     }
   ],
   "donations": [],
