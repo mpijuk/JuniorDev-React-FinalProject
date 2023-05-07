@@ -9,6 +9,7 @@ const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
     const [shownAnimal, setShownAnimal] = useState(animal);
     const [isEditing, setIsEditing] = useState(false);
 
+    console.log(isEditing);
     const handleAdoption = async() => {
         const requestBody = requestFormat(shownAnimal);
         requestBody.adopted = true;
@@ -29,27 +30,31 @@ const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
                     <img
                         src={shownAnimal.picturePath} 
                         alt={shownAnimal.picturePath}
-                        width="180px" 
-                        height="180px"
-                        style={{objectFit: "cover"}}
+                        width="170px" 
+                        height="170px"
+                        style={{objectFit: "cover", borderRadius: "20px", boxShadow: "5px 5px 10px"}}
                     >
                     </img>
                     <div className={styles.dataDiv}>
                         <p className={styles.dataP}>NAME: {shownAnimal.name}</p>
                         <p className={styles.dataP}>SPECIES: {shownAnimal.species}</p>
-                        <p className={styles.dataP}>ADOPTION STATUS: {shownAnimal.adopted ? "Adopted" : "Not adopted"}</p>
+                        <p className={styles.dataP}>STATUS: {shownAnimal.adopted ? "Adopted" : "Not adopted"}</p>
                     </div>
                 </div>
-                <p>Description:</p>
-                <p>{shownAnimal.description}</p>
+                <p className={styles.dataP}>Description:</p>
+                <p className={styles.descriptionDataP}>{shownAnimal.description}</p>
                 <Divider />
-                <p>Chipped: {shownAnimal.chipped ? "YES" : "NO"}</p>
-                <p>Last examination: {shownAnimal.lastExamination}</p>
-                {isAdmin ?
-                    <button>Edit</button> :
-                    animal.adopted ? null :
-                    <button onClick={handleAdoption}>Adopt</button>
-                }
+                <div className={styles.additionalDataDiv}>
+                    <p className={styles.dataP}>Last examination: {shownAnimal.lastExamination}</p>
+                    <p className={styles.dataP}>Chipped: {shownAnimal.chipped ? "YES" : "NO"}</p>
+                </div>
+                <div className={styles.buttonDiv}>
+                    {isAdmin ?
+                        <button onClick={() => setIsEditing(true)} className={styles.click}>Edit</button> :
+                        animal.adopted ? null :
+                        <button onClick={handleAdoption} className={styles.click}>Adopt</button>
+                    }
+                </div>
             </div>
         </div>
     );
