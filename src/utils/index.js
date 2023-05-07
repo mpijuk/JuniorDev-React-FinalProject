@@ -12,7 +12,7 @@ export const location = {
     lng: 16.469340,
 }
 
-export const requestFormat = (data) => (
+export const requestFormatAnimal = (data) => (
     {
         species: data.species,
         name: data.name,
@@ -22,5 +22,13 @@ export const requestFormat = (data) => (
         lastExamination: data.lastExamination,
         chipped: data.chipped,
         adopted: data.adopted
+    }
+);
+
+export const requestFormatNews = (data) => (
+    {
+        title: data.title,
+        text: data.text,
+        important: data.important
     }
 );

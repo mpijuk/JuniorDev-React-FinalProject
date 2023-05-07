@@ -15,7 +15,7 @@ import { DatePicker } from '@mui/x-date-pickers';
 import dayjs from "dayjs";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { requestFormat } from "../../utils";
+import { requestFormatAnimal } from "../../utils";
 import axios from "axios";
 
 const orderSchema = yup.object().shape({
@@ -40,7 +40,7 @@ const AddNewForm = () => {
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
     const handleFormSubmit = async(values, onSubmitProps) => {
-        const requestBody = requestFormat(values);
+        const requestBody = requestFormatAnimal(values);
         await axios.post("http://localhost:3001/animals", requestBody);
 
         onSubmitProps.resetForm();

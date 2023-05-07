@@ -54,8 +54,32 @@
       "chipped": false,
       "adopted": true,
       "id": 10
+    },
+    {
+      "species": "Cat",
+      "name": "Clea",
+      "age": 5,
+      "description": "",
+      "picturePath": "cat3.jpg",
+      "lastExamination": "05/02/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 11
     }
   ],
   "donations": [],
-  "news": []
+  "news": [
+    {
+      "title": "Check out ne animals",
+      "text": "We have more than 15 new animals ready for adoption.",
+      "important": false,
+      "id": 1
+    },
+    {
+      "title": "New partner",
+      "text": "Our new partner iz animal organization from Berlin.",
+      "important": true,
+      "id": 2
+    }
+  ]
 }

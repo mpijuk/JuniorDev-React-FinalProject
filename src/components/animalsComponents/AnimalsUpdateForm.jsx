@@ -11,7 +11,7 @@ import { DatePicker } from '@mui/x-date-pickers';
 import dayjs from "dayjs";
 import { Formik } from "formik";
 import * as yup from "yup";
-import { requestFormat } from "../../utils";
+import { requestFormatAnimal } from "../../utils";
 import axios from "axios";
 
 const orderSchema = yup.object().shape({
@@ -25,7 +25,7 @@ const AnimalsUpdateForm = ({initialValues, refreshList, toggle}) => {
     const initialValuesOrder = {...initialValues};
 
     const handleFormSubmit = async(values) => {
-        const requestBody = requestFormat(values);
+        const requestBody = requestFormatAnimal(values);
         
         await axios.put(`http://localhost:3001/animals/${values.id}`, requestBody);
         const result = await axios.get("http://localhost:3001/animals");

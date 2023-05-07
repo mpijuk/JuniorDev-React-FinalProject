@@ -2,19 +2,18 @@ import { useState } from "react";
 import { Divider } from "@mui/material";
 import axios from "axios";
 import styles from "../../styles/AnimalsPopUp.module.css";
-import { requestFormat } from "../../utils";
+import { requestFormatAnimal } from "../../utils";
 import AnimalsUpdateForm from "./AnimalsUpdateForm";
 
 const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
 
-    const [shownAnimal, setShownAnimal] = useState(animal);
     const [isEditing, setIsEditing] = useState(false);
 
-    const handleAdoption = async() => {
-        const requestBody = requestFormat(shownAnimal);
+    const updateAdoption = async() => {
+        const requestBody = requestFormatAnimal(animal);
         requestBody.adopted = true;
         
-        await axios.put(`http://localhost:3001/animals/${shownAnimal.id}`, requestBody);
+        await axios.put(`http://localhost:3001/animals/${animal.id}`, requestBody);
         const result = await axios.get("http://localhost:3001/animals");
         refreshList(result.data);
         toggle(false);
@@ -22,7 +21,7 @@ const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
 
     const deleteAnimal = async() => {
     
-        await axios.delete(`http://localhost:3001/animals/${shownAnimal.id}`);
+        await axios.delete(`http://localhost:3001/animals/${animal.id}`);
         const result = await axios.get("http://localhost:3001/animals");
         refreshList(result.data);
         toggle(false);
@@ -36,7 +35,7 @@ const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
                     <span className={styles.close} onClick={() => toggle(false)}>
                         &times;
                     </span>
-                    <AnimalsUpdateForm initialValues={shownAnimal} refreshList={refreshList} toggle={toggle}/>
+                    <AnimalsUpdateForm initialValues={animal} refreshList={refreshList} toggle={toggle}/>
                 </>
                 : <>
                     <span className={styles.close} onClick={() => toggle(false)}>
@@ -44,25 +43,25 @@ const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
                     </span>
                     <div className={styles.firstRow}>
                         <img
-                            src={shownAnimal.picturePath} 
-                            alt={shownAnimal.picturePath}
+                            src={animal.picturePath} 
+                            alt={animal.picturePath}
                             width="170px" 
                             height="170px"
                             style={{objectFit: "cover", borderRadius: "20px", boxShadow: "5px 5px 10px"}}
                         >
                         </img>
                         <div className={styles.dataDiv}>
-                            <p className={styles.dataP}>NAME: {shownAnimal.name}</p>
-                            <p className={styles.dataP}>SPECIES: {shownAnimal.species}</p>
-                            <p className={styles.dataP}>STATUS: {shownAnimal.adopted ? "Adopted" : "Not adopted"}</p>
+                            <p className={styles.dataP}>NAME: {animal.name}</p>
+                            <p className={styles.dataP}>SPECIES: {animal.species}</p>
+                            <p className={styles.dataP}>STATUS: {animal.adopted ? "Adopted" : "Not adopted"}</p>
                         </div>
                     </div>
                     <p className={styles.dataP}>Description:</p>
-                    <p className={styles.descriptionDataP}>{shownAnimal.description}</p>
+                    <p className={styles.descriptionDataP}>{animal.description}</p>
                     <Divider />
                     <div className={styles.additionalDataDiv}>
-                        <p className={styles.dataP}>Last examination: {shownAnimal.lastExamination}</p>
-                        <p className={styles.dataP}>Chipped: {shownAnimal.chipped ? "YES" : "NO"}</p>
+                        <p className={styles.dataP}>Last examination: {animal.lastExamination}</p>
+                        <p className={styles.dataP}>Chipped: {animal.chipped ? "YES" : "NO"}</p>
                     </div>
                     <div className={styles.buttonDiv}>
                         {isAdmin ?
@@ -71,7 +70,7 @@ const AnimalsPopUp = ({animal, isAdmin, refreshList, toggle}) => {
                                 <button onClick={deleteAnimal} className={styles.clickR}>Delete</button>
                             </> :
                             animal.adopted ? null :
-                            <button onClick={handleAdoption} className={styles.clickG}>Adopt</button>
+                            <button onClick={updateAdoption} className={styles.clickG}>Adopt</button>
                         }
                     </div>
                 </>
