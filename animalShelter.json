@@ -12,17 +12,6 @@
       "id": 1
     },
     {
-      "species": "Cat",
-      "name": "Cleopatra",
-      "age": 5,
-      "description": "Clea is cuddly and craves attention.",
-      "picturePath": "cat3.jpg",
-      "lastExamination": "3/1/2023",
-      "chipped": false,
-      "adopted": true,
-      "id": 2
-    },
-    {
       "species": "Dog",
       "name": "Blackey",
       "age": 5,
@@ -34,25 +23,14 @@
       "id": 3
     },
     {
-      "species": "Bird",
-      "name": "Ara",
-      "age": 1,
-      "description": "Ara is very rude sometimes.",
-      "picturePath": "bird3.jpg",
-      "lastExamination": "05/10/2023",
+      "species": "Other",
+      "name": "Bela",
+      "age": 9,
+      "description": "bla bla.",
+      "picturePath": "snake2.jpg",
+      "lastExamination": "04/20/2023",
       "chipped": true,
       "adopted": true,
-      "id": 7
-    },
-    {
-      "species": "Other",
-      "name": "Smuculja",
-      "age": 8,
-      "description": "",
-      "picturePath": "snake1.jpg",
-      "lastExamination": "04/11/2023",
-      "chipped": true,
-      "adopted": false,
       "id": 8
     },
     {

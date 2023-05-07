@@ -2,14 +2,10 @@ import {
     Box,
     Button,
     TextField,
-    Radio,
-    RadioGroup,
     FormControlLabel,
     Checkbox,
     FormControl,
     Typography,
-    useMediaQuery,
-    Divider,
 } from "@mui/material";
 import { DatePicker } from '@mui/x-date-pickers';
 import dayjs from "dayjs";
@@ -19,41 +15,25 @@ import { requestFormat } from "../../utils";
 import axios from "axios";
 
 const orderSchema = yup.object().shape({
-    species: yup.string().required("required"),
     name: yup.string().min(2, 'name too short').required("Name is required"),
     age: yup.string().required("Age is required"),
     picturePath: yup.string().required("Picture path is required"),
 });
 
-const initialValuesOrder = {
-    species: "Other",
-    name: "",
-    age: "",
-    description: "",
-    picturePath: "",
-    lastExamination: "1/1/2022",
-    chipped: false,
-    adopted: false,
-};
+const AnimalsUpdateForm = ({initialValues, refreshList, toggle}) => {
 
-const AddNewForm = () => {
-    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+    const initialValuesOrder = {...initialValues};
 
-    const handleFormSubmit = async(values, onSubmitProps) => {
+    const handleFormSubmit = async(values) => {
         const requestBody = requestFormat(values);
-        await axios.post("http://localhost:3001/animals", requestBody);
-
-        onSubmitProps.resetForm();
+        
+        await axios.put(`http://localhost:3001/animals/${values.id}`, requestBody);
+        const result = await axios.get("http://localhost:3001/animals");
+        refreshList(result.data);
+        toggle(false); 
     };
 
     return (
-        <Box
-          width={isNonMobileScreens ? "50%" : "70%"}
-          p="2rem"
-          m="4rem auto"
-          borderRadius="1.5rem"
-          backgroundColor= "#E5C9D7"
-        >
             <Formik
               onSubmit={handleFormSubmit}
               initialValues={initialValuesOrder}
@@ -71,28 +51,10 @@ const AddNewForm = () => {
                     <form onSubmit={handleSubmit}>
                         <Box
                           display="grid"
-                          gap = "25px"
+                          gap = "20px"
                           gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                         >
-                            <Typography color="#333" fontWeight="800" fontSize="30px" gridColumn="span 4">Add new animal</Typography>
-                            <Divider sx={{ 
-                                gridColumn: "span 4",
-                              }}/>
-                            
-                            <Typography color="#333" fontWeight="600" fontSize="18px" gridColumn="span 4">Animal personal data</Typography>
-                            <RadioGroup
-                              onChange={handleChange}
-                              value={values.species}
-                              name = "species"
-                              sx={{ 
-                                gridColumn: "span 4",
-                              }}
-                            >
-                                <FormControlLabel value="Dog" label="Dog" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
-                                <FormControlLabel value="Cat" label="Cat" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
-                                <FormControlLabel value="Bird" label="Bird" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
-                                <FormControlLabel value="Other" label="Other" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
-                            </RadioGroup>
+                            <Typography color="#333" fontWeight="800" fontSize="20px" gridColumn="span 4">Update animal data</Typography>
                             <TextField
                               label="Name"
                               onBlur={handleBlur}
@@ -101,7 +63,7 @@ const AddNewForm = () => {
                               name="name"
                               error={Boolean(touched.name) && Boolean(errors.name)}
                               helperText={touched.name && errors.name}
-                              sx={{ gridColumn: "span 4" }}
+                              sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                               type="number"
@@ -112,7 +74,7 @@ const AddNewForm = () => {
                               name="age"
                               error={Boolean(touched.age) && Boolean(errors.age)}                                
                               helperText={touched.age && errors.age}
-                              sx={{ gridColumn: "span 4" }}
+                              sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                               label="Description"
@@ -134,8 +96,6 @@ const AddNewForm = () => {
                               helperText={touched.picturePath && errors.picturePath}
                               sx={{ gridColumn: "span 4" }}
                             />
-                            
-                            <Typography color="#333" fontWeight="600" fontSize="18px" gridColumn="span 4">Additional data</Typography>
                             <DatePicker
                               onChange={(value) => setFieldValue("lastExamination", dayjs(value).format("MM/DD/YYYY"))}
                               label="Last examination"
@@ -144,14 +104,29 @@ const AddNewForm = () => {
                             />
                             <FormControl 
                               sx={{ 
-                              gridColumn: "span 4",
+                              gridColumn: "span 1",
                             }}
                             >
                                 <FormControlLabel 
                                   label="Chipped" 
                                   onChange={handleChange}
                                   value={values.chipped}
+                                  checked={values.chipped ? true : false}
                                   name="chipped"
+                                  control={<Checkbox style={{ color: "#66bb6a" }}/>} 
+                                />
+                            </FormControl>
+                            <FormControl 
+                              sx={{ 
+                              gridColumn: "span 1",
+                            }}
+                            >
+                                <FormControlLabel 
+                                  label="Adopted" 
+                                  onChange={handleChange}
+                                  value={values.adopted}
+                                  checked={values.adopted ? true : false}
+                                  name="adopted"
                                   control={<Checkbox style={{ color: "#66bb6a" }}/>} 
                                 />
                             </FormControl>
@@ -168,15 +143,14 @@ const AddNewForm = () => {
                                 "&:hover": { color: "#66bb6a" },
                               }}
                             >
-                                Save
+                                Update
                             </Button>
                         </Box>
                     </form>
                 )}
             </Formik>
-        </Box>
     );
 
 };
 
-export default AddNewForm;
+export default AnimalsUpdateForm;
