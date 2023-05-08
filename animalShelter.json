@@ -70,16 +70,60 @@
   "donations": [],
   "news": [
     {
-      "title": "Check out ne animals",
-      "text": "We have more than 15 new animals ready for adoption.",
+      "title": "first",
+      "text": "this is first news.",
       "important": false,
-      "id": 1
+      "date": "2023-05-08T14:07:54.060Z",
+      "id": 2
     },
     {
-      "title": "New partner",
-      "text": "Our new partner iz animal organization from Berlin.",
-      "important": true,
-      "id": 2
+      "title": "second",
+      "text": "this is second news.",
+      "important": false,
+      "date": "2023-05-08T14:08:04.911Z",
+      "id": 3
+    },
+    {
+      "title": "third",
+      "text": "this is third news.",
+      "important": false,
+      "date": "2023-05-08T14:08:16.115Z",
+      "id": 4
+    },
+    {
+      "title": "fourth",
+      "text": "This is fourth news.",
+      "important": false,
+      "date": "2023-05-08T14:39:17.359Z",
+      "id": 5
+    },
+    {
+      "title": "fifth",
+      "text": "This is fifth news.",
+      "important": false,
+      "date": "2023-05-08T14:40:53.912Z",
+      "id": 6
+    },
+    {
+      "title": "blabla",
+      "text": "dsfdsgdsgdf",
+      "important": false,
+      "date": "2023-05-08T14:43:06.742Z",
+      "id": 7
+    },
+    {
+      "title": "eight",
+      "text": "this is 8.",
+      "important": false,
+      "date": "2023-05-08T14:45:11.941Z",
+      "id": 8
+    },
+    {
+      "title": "Ninth",
+      "text": "This is news number 9.",
+      "important": false,
+      "date": "2023-05-08T14:54:29.719Z",
+      "id": 9
     }
   ]
 }

@@ -7,11 +7,11 @@ import {
     FormControl,
     Typography,
 } from "@mui/material";
-import dayjs from "dayjs";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { requestFormatNews } from "../../utils";
 import axios from "axios";
+import { sortNews } from "../../utils";
 
 const orderSchema = yup.object().shape({
     title: yup.string().max(20, 'Title too long').required("Title is required"),
@@ -26,13 +26,15 @@ const initialValuesOrder = {
 
 const NewsForm = ({isAdmin, refreshList, toggle}) => {
 
-
     const handleFormSubmit = async(values) => {
         const requestBody = requestFormatNews(values);
+        const date = new Date();
+        requestBody.date = date;
         
         await axios.post("http://localhost:3001/news", requestBody);
         const result = await axios.get("http://localhost:3001/news");
-        refreshList(result.data);
+        const sortedNews = sortNews([...result.data]);
+        refreshList(sortedNews);
         toggle(false); 
     };
 

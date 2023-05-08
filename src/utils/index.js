@@ -32,3 +32,11 @@ export const requestFormatNews = (data) => (
         important: data.important
     }
 );
+
+export const sortNews = (array) => {
+    return array.sort((a, b) => {
+        const aTime = new Date(a.date);
+        const bTime = new Date(b.date);
+        return bTime.getTime() - aTime.getTime();
+    });
+}
