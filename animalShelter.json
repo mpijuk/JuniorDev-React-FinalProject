@@ -70,60 +70,39 @@
   "donations": [],
   "news": [
     {
-      "title": "first",
-      "text": "this is first news.",
+      "title": "Congratulations to everyone",
+      "text": "We are excited to announce that we have found forever homes for 25 of our furry friends this past month! We want to thank our amazing community for their continued support in helping us find loving families for our shelter animals.",
       "important": false,
-      "date": "2023-05-08T14:07:54.060Z",
+      "date": "2023-05-08T16:59:19.211Z",
+      "id": 1
+    },
+    {
+      "title": "Renovation in progress",
+      "text": "Thanks to a generous donation from a local business, we were able to renovate our cat playroom and provide new toys and bedding for our feline residents. We are so grateful for our community's support in making our shelter a more comfortable and enriching environment for our furry friends.",
+      "important": false,
+      "date": "2023-05-08T16:59:31.268Z",
       "id": 2
     },
     {
-      "title": "second",
-      "text": "this is second news.",
-      "important": false,
-      "date": "2023-05-08T14:08:04.911Z",
+      "title": "Increase animal surrenders",
+      "text": "In light of the recent increase in animal surrenders, we want to remind our community that spaying and neutering your pets can greatly reduce the number of animals in shelters. Please consider this option to help us provide the best care for our furry friends.",
+      "important": true,
+      "date": "2023-05-08T17:01:34.873Z",
       "id": 3
     },
     {
-      "title": "third",
-      "text": "this is third news.",
+      "title": "R.I.P. Max",
+      "text": "We are sad to announce the passing of one of our long-term residents, a sweet senior dog named Max. While he never found his forever home, we are grateful for the love and joy he brought to our staff and other shelter animals during his time with us.",
       "important": false,
-      "date": "2023-05-08T14:08:16.115Z",
+      "date": "2023-05-08T17:04:38.920Z",
       "id": 4
     },
     {
-      "title": "fourth",
-      "text": "This is fourth news.",
-      "important": false,
-      "date": "2023-05-08T14:39:17.359Z",
+      "title": "Kitten season",
+      "text": "It's kitten season at our shelter and we are currently in need of foster homes to care for our youngest residents. If you have experience caring for newborn kittens and are interested in providing temporary homes, please contact us for more information.",
+      "important": true,
+      "date": "2023-05-08T17:07:30.054Z",
       "id": 5
-    },
-    {
-      "title": "fifth",
-      "text": "This is fifth news.",
-      "important": false,
-      "date": "2023-05-08T14:40:53.912Z",
-      "id": 6
-    },
-    {
-      "title": "blabla",
-      "text": "dsfdsgdsgdf",
-      "important": false,
-      "date": "2023-05-08T14:43:06.742Z",
-      "id": 7
-    },
-    {
-      "title": "eight",
-      "text": "this is 8.",
-      "important": false,
-      "date": "2023-05-08T14:45:11.941Z",
-      "id": 8
-    },
-    {
-      "title": "Ninth",
-      "text": "This is news number 9.",
-      "important": false,
-      "date": "2023-05-08T14:54:29.719Z",
-      "id": 9
     }
   ]
 }

@@ -1,0 +1,18 @@
+.click{
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    color: azure;
+    font-weight: bold;
+    width: 140px;
+    background-color: #66bb6a;
+    font-size: 16px;
+  }
+  
+  .click:hover{
+    cursor:pointer;
+    opacity: 0.7;
+  }
