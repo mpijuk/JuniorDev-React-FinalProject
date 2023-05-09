@@ -1,17 +1,17 @@
-import NewsForm from "./NewsForm";
 import styles from "../../styles/PopUp.module.css";
+import DonationsForm from "./DonationsForm";
 
-const NewsPopUp = ({isAdmin, refreshList, toggle}) => {
+const DonationsPopUp = ({isAdmin, toggle}) => {
     return(
         <div className={styles.modal}>
             <div className={styles.modalContent}>
                 <span className={styles.close} onClick={() => toggle(false)}>
                     &times;
                 </span>
-                <NewsForm isAdmin={isAdmin} refreshList={refreshList} toggle={toggle} />
+                <DonationsForm isAdmin={isAdmin} toggle={toggle} />
             </div>
         </div>
     );
 };
 
-export default NewsPopUp;
+export default DonationsPopUp;

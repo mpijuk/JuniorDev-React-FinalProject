@@ -40,3 +40,11 @@ export const sortNews = (array) => {
         return bTime.getTime() - aTime.getTime();
     });
 }
+
+export const requestFormatDonation = (data) => (
+    {
+        type: data.type,
+        amount: data.amount,
+        description: data.description
+    }
+);

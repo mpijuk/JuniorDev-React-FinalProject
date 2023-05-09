@@ -1,8 +1,15 @@
-const Donations = () => {
+import { useState } from "react";
+import styles from "../styles/Button.module.css";
+import DonationsPopUp from "../components/donationsComponents/DonationsPopUp";
+
+const Donations = ({isAdmin}) => {
+    const [isClicked, setIsClicked] = useState(false);
+
     return(
-        <p>
-            Donations
-        </p>
+        <div>
+            <button onClick={() => setIsClicked(true)} className={styles.click}>Add donation</button>
+            {isClicked ? <DonationsPopUp isAdmin={isAdmin} toggle={setIsClicked}/> : null}
+        </div>
     );
 };
 

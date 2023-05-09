@@ -21,7 +21,7 @@ import axios from "axios";
 const orderSchema = yup.object().shape({
     species: yup.string().required("required"),
     name: yup.string().min(2, 'name too short').required("Name is required"),
-    age: yup.string().required("Age is required"),
+    age: yup.number().positive("Age must be positive number").integer("Age must be an integer").required("Age is required"),
     picturePath: yup.string().required("Picture path is required"),
 });
 

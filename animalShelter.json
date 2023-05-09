@@ -67,7 +67,22 @@
       "id": 11
     }
   ],
-  "donations": [],
+  "donations": [
+    {
+      "type": "Food",
+      "amount": 350,
+      "description": "10kg dog food.",
+      "category": "offered",
+      "id": 1
+    },
+    {
+      "type": "Toys",
+      "amount": 200,
+      "description": "Toys for cats.",
+      "category": "wanted",
+      "id": 2
+    }
+  ],
   "news": [
     {
       "title": "Congratulations to everyone",

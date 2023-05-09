@@ -3,7 +3,7 @@ import axios from "axios";
 import NewsList from "../components/newsComponents/NewsList";
 import NewsPopUp from "../components/newsComponents/NewsPopUp";
 import { sortNews } from "../utils";
-import styles from "../styles/News.module.css";
+import styles from "../styles/Button.module.css";
 
 const News = ({isAdmin}) => {
     const [news, setNews] = useState([]);
