@@ -21,7 +21,7 @@ const initialValuesOrder = {
     description: "",
 };
 
-const DonationsForm = ({isAdmin, toggle}) => {
+const DonationsForm = ({isAdmin, refreshList, toggle}) => {
 
     const handleFormSubmit = async(values) => {
         const requestBody = requestFormatDonation(values);
@@ -34,7 +34,7 @@ const DonationsForm = ({isAdmin, toggle}) => {
         
         await axios.post("http://localhost:3001/donations", requestBody);
         const result = await axios.get("http://localhost:3001/donations");
-        console.log(result.data);
+        refreshList(result.data);
         toggle(false); 
     };
 

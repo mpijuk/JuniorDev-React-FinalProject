@@ -1,0 +1,74 @@
+.divContainer {
+    width: 70rem;
+    box-shadow: 5px 5px 10px grey;
+    background-color: #e2e2e2;
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+    padding: 30px;
+}
+
+.pTitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.divHeader {
+    display: flex;
+    width: 45rem;
+    justify-content: space-between;
+}
+
+.divHeader p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.divBodyData {
+    display: flex;
+    width: 45rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divBody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clickG{
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    width: 90px;
+    background-color: #66bb6a;
+    font-size: 16px;
+    margin-top: 0.5rem;
+  }
+  
+  .clickG:hover{
+    cursor:pointer;
+    opacity: 0.7;
+  }
+  
+  .clickR{
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    width: 90px;
+    background-color: #bb6a66;
+    font-size: 16px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  .clickR:hover{
+    cursor:pointer;
+    opacity: 0.7;
+  }
+
+
+

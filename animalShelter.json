@@ -72,15 +72,43 @@
       "type": "Food",
       "amount": 350,
       "description": "10kg dog food.",
-      "category": "offered",
+      "category": "donated",
       "id": 1
     },
     {
       "type": "Toys",
       "amount": 200,
       "description": "Toys for cats.",
-      "category": "wanted",
+      "category": "donated",
       "id": 2
+    },
+    {
+      "type": "Food",
+      "amount": 800,
+      "description": "Food for birds 20kg.",
+      "category": "wanted",
+      "id": 3
+    },
+    {
+      "type": "Vet-exam",
+      "amount": 500,
+      "description": "Donation for vet examination",
+      "category": "donated",
+      "id": 5
+    },
+    {
+      "type": "Food",
+      "amount": 350,
+      "description": "10kg dog food.",
+      "category": "wanted",
+      "id": 6
+    },
+    {
+      "type": "Toys",
+      "amount": 500,
+      "description": "Toys for birds.",
+      "category": "offered",
+      "id": 7
     }
   ],
   "news": [
