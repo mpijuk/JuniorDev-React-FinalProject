@@ -54,7 +54,7 @@ const AnimalsUpdateForm = ({initialValues, refreshList, toggle}) => {
                           gap = "20px"
                           gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                         >
-                            <Typography color="#333" fontWeight="800" fontSize="20px" gridColumn="span 4">Update animal data</Typography>
+                            <Typography color="#333" fontWeight="800"  fontFamily="Nunito" fontSize="20px" gridColumn="span 4">Update animal data</Typography>
                             <TextField
                               label="Name"
                               onBlur={handleBlur}

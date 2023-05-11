@@ -63,7 +63,7 @@
       "picturePath": "cat3.jpg",
       "lastExamination": "05/02/2023",
       "chipped": true,
-      "adopted": false,
+      "adopted": true,
       "id": 11
     },
     {
@@ -145,7 +145,7 @@
       "type": "Food",
       "amount": 350,
       "description": "10kg cat food.",
-      "category": "wanted",
+      "category": "donated",
       "id": 6
     },
     {
@@ -154,13 +154,6 @@
       "description": "Toys for birds.",
       "category": "offered",
       "id": 7
-    },
-    {
-      "type": "Toys",
-      "amount": 200,
-      "description": "Toys for birds.",
-      "category": "donated",
-      "id": 8
     },
     {
       "type": "Vets-cost",
@@ -175,6 +168,13 @@
       "description": "10kg dog food.",
       "category": "wanted",
       "id": 10
+    },
+    {
+      "type": "Toys",
+      "amount": 200,
+      "description": "Toys for birds.",
+      "category": "wanted",
+      "id": 12
     }
   ],
   "news": [
