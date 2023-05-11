@@ -1,6 +1,7 @@
 import styles from "../../styles/AnimalsList.module.css";
 import AnimalsPopUp from "./AnimalsPopUp";
 import { useState } from "react";
+import Image from "mui-image";
 
 const AnimalsList = ({animals, refreshList, isAdmin}) => {
     
@@ -11,7 +12,7 @@ const AnimalsList = ({animals, refreshList, isAdmin}) => {
         <>
             <div className={styles.divContainer}>
                 {animals?.map((animal) => (
-                        <img 
+                        <Image 
                         key={animal.id} 
                         src={`${animal.picturePath}`} 
                         alt={animal.picturePath} 
@@ -19,12 +20,11 @@ const AnimalsList = ({animals, refreshList, isAdmin}) => {
                         height="250px" 
                         style={animal.adopted ? {boxShadow: "10px 10px 10px #66bb6a"} : { boxShadow: "10px 10px 10px #bb6a66"}}
                         className={styles.zoom}
-                        data={animal}
                         onClick={() => {
                             setChosenAnimal(animal);
                             setIsClicked(true);
                         }}
-                        ></img>
+                        />
                 ))}
             </div>
             {isClicked ? <AnimalsPopUp animal={chosenAnimal} refreshList={refreshList} isAdmin={isAdmin} toggle={setIsClicked}/> : null}
