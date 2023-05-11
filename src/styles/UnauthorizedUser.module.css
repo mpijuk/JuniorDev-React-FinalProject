@@ -1,3 +1,4 @@
+
 .unauthorizedContainer {
     display: flex;
     flex-direction: column;
@@ -18,5 +19,6 @@
 .spanName {
     color: #66bb6a;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 26px;
+    font-family: 'Bruno Ace SC';
 }

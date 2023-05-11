@@ -18,11 +18,11 @@ const News = ({isAdmin}) => {
     }, []);
 
     return(
-        <div>
+        <>
             <button onClick={() => setIsClicked(true)} className={styles.click}>Add news</button>
             {isClicked ? <NewsPopUp isAdmin={isAdmin} refreshList={setNews} toggle={setIsClicked}/> : null}
             <NewsList news={news}  refreshList={setNews} isAdmin={isAdmin}/>
-        </div>
+        </>
     );
 };
 

@@ -15,7 +15,7 @@
       "species": "Dog",
       "name": "Blackey",
       "age": 5,
-      "description": "Blackey je legenda od pasa.",
+      "description": "Blackey is sometimes sleepy.",
       "picturePath": "dog2.jpg",
       "lastExamination": "05/12/2023",
       "chipped": true,
@@ -26,7 +26,7 @@
       "species": "Other",
       "name": "Bela",
       "age": 9,
-      "description": "bla bla.",
+      "description": "",
       "picturePath": "snake2.jpg",
       "lastExamination": "04/20/2023",
       "chipped": true,
@@ -48,7 +48,7 @@
       "species": "Cat",
       "name": "Oscar",
       "age": 1,
-      "description": "Oscar is eager for love and attention",
+      "description": "Oscar is eager for love and attention.",
       "picturePath": "cat1.jpg",
       "lastExamination": "04/09/2023",
       "chipped": false,
@@ -144,7 +144,7 @@
     {
       "type": "Food",
       "amount": 350,
-      "description": "10kg dog food.",
+      "description": "10kg cat food.",
       "category": "wanted",
       "id": 6
     },
@@ -154,6 +154,27 @@
       "description": "Toys for birds.",
       "category": "offered",
       "id": 7
+    },
+    {
+      "type": "Toys",
+      "amount": 200,
+      "description": "Toys for birds.",
+      "category": "donated",
+      "id": 8
+    },
+    {
+      "type": "Vets-cost",
+      "amount": 350,
+      "description": "Vets examination.",
+      "category": "offered",
+      "id": 9
+    },
+    {
+      "type": "Food",
+      "amount": 350,
+      "description": "10kg dog food.",
+      "category": "wanted",
+      "id": 10
     }
   ],
   "news": [
