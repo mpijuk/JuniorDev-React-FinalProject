@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
 .headerContainer {
     display: flex;
     flex-direction: column;
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -15,8 +18,9 @@
 }
 
 .name {
+    font-family: 'Bruno Ace SC';
     font-size: 32px;
-    font-weight: bolder;
+    font-weight: bold;
     color: #66bb6a;
 }
 

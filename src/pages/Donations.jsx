@@ -19,13 +19,13 @@ const Donations = ({isAdmin}) => {
     }, []);
 
     return(
-        <div>
-            <button onClick={() => setIsClicked(true)} className={styles.click}>Add donation</button>
+        <>
             {isClicked ? <DonationsPopUp isAdmin={isAdmin} refreshList={setDonations} toggle={setIsClicked}/> : null}
+            <button onClick={() => setIsClicked(true)} className={styles.click}>Add donation</button>
             <DonationsListWanted isAdmin={isAdmin} donations={donations.filter((don) => don.category === "wanted")} refreshList={setDonations}/>
             <DonationsListOffered isAdmin={isAdmin} donations={donations.filter((don) => don.category === "offered")} refreshList={setDonations}/>
             <DonationsListDonated isAdmin={isAdmin} donations={donations.filter((don) => don.category === "donated")} refreshList={setDonations}/>
-        </div>
+        </>
     );
 };
 

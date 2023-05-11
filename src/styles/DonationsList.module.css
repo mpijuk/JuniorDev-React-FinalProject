@@ -14,7 +14,7 @@
 
 .divHeader {
     display: flex;
-    width: 45rem;
+    width: 50rem;
     justify-content: space-between;
 }
 
@@ -25,7 +25,7 @@
 
 .divBodyData {
     display: flex;
-    width: 45rem;
+    width: 50rem;
     justify-content: space-between;
     align-items: center;
 }

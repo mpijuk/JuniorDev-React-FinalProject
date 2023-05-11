@@ -23,7 +23,7 @@ const DonationsListWanted = ({isAdmin, donations, refreshList}) => {
     };
 
     return (
-        <div className={styles.divContainer}>
+        <div className={styles.divContainer} style={{marginTop:"3rem"}}>
             <p className={styles.pTitle}>We are looking for</p>
             <div className={styles.divHeader}>
                 <p>Type</p>

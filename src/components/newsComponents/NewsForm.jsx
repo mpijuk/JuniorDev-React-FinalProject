@@ -58,7 +58,7 @@ const NewsForm = ({isAdmin, refreshList, toggle}) => {
                           gap = "20px"
                           gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                         >
-                            <Typography color="#333" fontWeight="800" fontSize="20px" gridColumn="span 4">Enter news data</Typography>
+                            <Typography color="#333" fontWeight="800" fontFamily="Nunito" fontSize="20px" gridColumn="span 4">Enter news data</Typography>
                             <TextField
                               label="Title"
                               onBlur={handleBlur}
@@ -101,9 +101,10 @@ const NewsForm = ({isAdmin, refreshList, toggle}) => {
                               fullWidth
                               type="submit"
                               sx={{
-                                m: "2rem 0",
+                                mt: "2rem",
                                 p: "1rem",
                                 backgroundColor: "#66bb6a",
+                                fontFamily: "Nunito",
                                 color: "azure",
                                 "&:hover": { color: "#66bb6a" },
                               }}

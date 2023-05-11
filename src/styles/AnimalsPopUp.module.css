@@ -29,7 +29,8 @@
 
 .firstRow {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
+  align-items: center; 
 }
 
 .additionalDataDiv {
@@ -53,8 +54,8 @@
 .dataDiv {
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
-  padding-right: 20px;
+  justify-content: center;
+  padding-right: 30px;
 }
 
 .buttonDiv {

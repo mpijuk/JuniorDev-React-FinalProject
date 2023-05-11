@@ -69,7 +69,7 @@ const Filters = ({ refreshList }) => {
                 <FormControlLabel value="true" label="Adopted" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
                 <FormControlLabel value="false" label="Not adopted" control={<Radio style={{ color: "#66bb6a" }}/>}></FormControlLabel>
             </RadioGroup>
-            <Divider style={{paddingTop:"0.75rem"}}/>
+            <Divider sx={{ borderBottomWidth: 3, mt: "0.8rem"}} color="azure"/>
             <p>Species:</p>
             <RadioGroup
               onChange={handleSpeciesFilterChange}

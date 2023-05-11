@@ -4,7 +4,7 @@
       "species": "Dog",
       "name": "Max",
       "age": 3,
-      "description": "Max is very polite.dsfnbnjdfnsdfvnajkfbnafbnajsfnlajfsnvjkafbnjafjkasfnvjdjfbajdb ajdfnajdfbnjadfbnjdfnjknfadfjjffvjasvnjsdnjdncsdjndjndjcnsjcndjnjdsncjnjdnjncjndscnsdnsjnsjvndfjnjdfjsdfbjsdfbjsdbjdfnvjdfnvjfnvjfnvjfnvjnvjfnvjvnjdfnjnvjsjbjsdbdfbdfjbbfdjbjvbafiovbdhifvbahfvbajvnddjvnjifvnjvnjifvnjifvjinxnvjjjnnpriorjofsvnjvbajbv",
+      "description": "Max is very polite.",
       "picturePath": "dog3.jpg",
       "lastExamination": "18/7/2022",
       "chipped": true,
@@ -16,7 +16,7 @@
       "name": "Blackey",
       "age": 5,
       "description": "Blackey je legenda od pasa.",
-      "picturePath": "dog1.jpg",
+      "picturePath": "dog2.jpg",
       "lastExamination": "05/12/2023",
       "chipped": true,
       "adopted": true,
@@ -65,6 +65,72 @@
       "chipped": true,
       "adopted": false,
       "id": 11
+    },
+    {
+      "species": "Other",
+      "name": "Ben",
+      "age": 7,
+      "description": "Ben is a tame snake.",
+      "picturePath": "snake1.jpg",
+      "lastExamination": "03/21/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 12
+    },
+    {
+      "species": "Dog",
+      "name": "Bono",
+      "age": 7,
+      "description": "Bono is a legend.",
+      "picturePath": "dog4.jpg",
+      "lastExamination": "04/18/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 13
+    },
+    {
+      "species": "Bird",
+      "name": "Hanah",
+      "age": 3,
+      "description": "Hanah likes to sing opera",
+      "picturePath": "bird1.jpg",
+      "lastExamination": "05/02/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 14
+    },
+    {
+      "species": "Bird",
+      "name": "Joline",
+      "age": 8,
+      "description": "Joline likes to fly around.",
+      "picturePath": "bird4.jpg",
+      "lastExamination": "05/03/2023",
+      "chipped": false,
+      "adopted": true,
+      "id": 15
+    },
+    {
+      "species": "Cat",
+      "name": "Angie",
+      "age": 2,
+      "description": "Angie likes to cuddle.",
+      "picturePath": "cat2.jpg",
+      "lastExamination": "04/27/2023",
+      "chipped": true,
+      "adopted": false,
+      "id": 16
+    },
+    {
+      "species": "Dog",
+      "name": "Oto",
+      "age": 9,
+      "description": "Oto is literally man's best friend.",
+      "picturePath": "dog5.jpg",
+      "lastExamination": "1/1/2022",
+      "chipped": false,
+      "adopted": true,
+      "id": 17
     }
   ],
   "donations": [
@@ -74,27 +140,6 @@
       "description": "10kg dog food.",
       "category": "donated",
       "id": 1
-    },
-    {
-      "type": "Toys",
-      "amount": 200,
-      "description": "Toys for cats.",
-      "category": "donated",
-      "id": 2
-    },
-    {
-      "type": "Food",
-      "amount": 800,
-      "description": "Food for birds 20kg.",
-      "category": "wanted",
-      "id": 3
-    },
-    {
-      "type": "Vet-exam",
-      "amount": 500,
-      "description": "Donation for vet examination",
-      "category": "donated",
-      "id": 5
     },
     {
       "type": "Food",

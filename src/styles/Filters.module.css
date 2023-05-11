@@ -1,7 +1,7 @@
 .divContainer {
     display: flex;
     flex-direction: column;
-    background-color:#E5C9D7;
+    background-color:#333;
     width: 12rem;
     height: 30rem;
     margin-top: 3rem;
@@ -12,11 +12,13 @@
 .divContainer p {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: azure;
 }
 
 .divContainer label {
     padding-left: 2.2rem;
+    color: azure;
+
 }
 
 

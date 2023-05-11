@@ -1,4 +1,4 @@
-import AddNewForm from "../components/addNewComponents/addNewForm";
+import AddNewForm from "../components/addNewComponents/AddNewForm";
 import UnauthorizedUser from "../components/addNewComponents/UnauthorizedUser";
 
 const AddNew = ({isAdmin}) => {

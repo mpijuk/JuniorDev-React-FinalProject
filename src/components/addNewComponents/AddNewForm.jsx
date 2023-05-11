@@ -50,8 +50,8 @@ const AddNewForm = () => {
         <Box
           width={isNonMobileScreens ? "50%" : "70%"}
           p="2rem"
-          m="4rem auto"
-          borderRadius="1.5rem"
+          m="3rem auto"
+          borderRadius="1rem"
           backgroundColor= "#E5C9D7"
         >
             <Formik
@@ -74,12 +74,12 @@ const AddNewForm = () => {
                           gap = "25px"
                           gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                         >
-                            <Typography color="#333" fontWeight="800" fontSize="30px" gridColumn="span 4">Add new animal</Typography>
+                            <Typography color="#333" fontFamily="Nunito" fontWeight="bold" fontSize="30px" gridColumn="span 4">Add new animal</Typography>
                             <Divider sx={{ 
                                 gridColumn: "span 4",
                               }}/>
                             
-                            <Typography color="#333" fontWeight="600" fontSize="18px" gridColumn="span 4">Animal personal data</Typography>
+                            <Typography color="#333" fontWeight="bold" fontFamily="Nunito" fontSize="18px" gridColumn="span 4">Animal personal data</Typography>
                             <RadioGroup
                               onChange={handleChange}
                               value={values.species}
@@ -101,7 +101,7 @@ const AddNewForm = () => {
                               name="name"
                               error={Boolean(touched.name) && Boolean(errors.name)}
                               helperText={touched.name && errors.name}
-                              sx={{ gridColumn: "span 4" }}
+                              sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                               type="number"
@@ -112,7 +112,7 @@ const AddNewForm = () => {
                               name="age"
                               error={Boolean(touched.age) && Boolean(errors.age)}                                
                               helperText={touched.age && errors.age}
-                              sx={{ gridColumn: "span 4" }}
+                              sx={{ gridColumn: "span 2" }}
                             />
                             <TextField
                               label="Description"
@@ -132,10 +132,10 @@ const AddNewForm = () => {
                               name="picturePath"
                               error={Boolean(touched.picturePath) && Boolean(errors.picturePath)}                                
                               helperText={touched.picturePath && errors.picturePath}
-                              sx={{ gridColumn: "span 4" }}
+                              sx={{ gridColumn: "span 2" }}
                             />
                             
-                            <Typography color="#333" fontWeight="600" fontSize="18px" gridColumn="span 4">Additional data</Typography>
+                            <Typography color="#333" fontWeight="bold" fontFamily="Nunito" fontSize="18px" gridColumn="span 4">Additional data</Typography>
                             <DatePicker
                               onChange={(value) => setFieldValue("lastExamination", dayjs(value).format("MM/DD/YYYY"))}
                               label="Last examination"
@@ -144,7 +144,7 @@ const AddNewForm = () => {
                             />
                             <FormControl 
                               sx={{ 
-                              gridColumn: "span 4",
+                              gridColumn: "span 2",
                             }}
                             >
                                 <FormControlLabel 
@@ -161,9 +161,10 @@ const AddNewForm = () => {
                               fullWidth
                               type="submit"
                               sx={{
-                                m: "2rem 0",
+                                mt: "2rem",
                                 p: "1rem",
                                 backgroundColor: "#66bb6a",
+                                fontFamily: "Nunito",
                                 color: "azure",
                                 "&:hover": { color: "#66bb6a" },
                               }}

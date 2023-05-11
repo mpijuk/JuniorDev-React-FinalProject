@@ -12,7 +12,7 @@ import axios from "axios";
 const orderSchema = yup.object().shape({
     type: yup.string().required("Type is required"),
     amount: yup.number().positive("Amount must be positive number").required("Amount is required"),
-    description: yup.string().max(40, 'Description too long'),
+    description: yup.string().max(20, 'Description too long'),
 });
 
 const initialValuesOrder = {
@@ -58,7 +58,7 @@ const DonationsForm = ({isAdmin, refreshList, toggle}) => {
                       gap = "20px"
                       gridTemplateColumns="repeat(4, minmax(0, 1fr))"
                     >
-                        <Typography color="#333" fontWeight="800" fontSize="20px" gridColumn="span 4">Enter donation data</Typography>
+                        <Typography color="#333" fontWeight="800" fontFamily="Nunito" fontSize="20px" gridColumn="span 4">Enter donation data</Typography>
                         <TextField
                           label="Type"
                           onBlur={handleBlur}
@@ -96,9 +96,10 @@ const DonationsForm = ({isAdmin, refreshList, toggle}) => {
                           fullWidth
                           type="submit"
                           sx={{
-                            m: "2rem 0",
+                            mt: "2rem",
                             p: "1rem",
                             backgroundColor: "#66bb6a",
+                            fontFamily: "Nunito",
                             color: "azure",
                             "&:hover": { color: "#66bb6a" },
                           }}
